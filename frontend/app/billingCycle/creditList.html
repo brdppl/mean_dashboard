@@ -1,0 +1,22 @@
+<div class="col-xs-12">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in vm.dados.credits">
+                <td><input type="text" class="form-control" ng-model="x.name" ng-readonly="vm.tabDelete" placeholder="Informe o nome"></td>
+                <td><input type="number" class="form-control" ng-model="x.value" ng-change="vm.calculateValues()" ng-readonly="vm.tabDelete" placeholder="Informe o valor"></td>
+                <td>
+                    <button class="btn btn-success" ng-click="vm.addCredit($index)" ng-disabled="vm.tableDelete"><i class="fas fa-plus"></i></button>
+                    <button class="btn btn-warning" ng-click="vm.cloneCredit($index, x)" ng-disabled="vm.tableDelete"><i class="far fa-clone"></i></button>
+                    <button class="btn btn-danger" ng-click="vm.deleteCredit($index)" ng-disabled="vm.tableDelete"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

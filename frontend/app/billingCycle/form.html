@@ -1,0 +1,36 @@
+<form role="form">
+    <div class="box-body">
+        <div class="row">
+            <field type="text" id="name" label="Nome" grid="12 4" model="vm.dados.name" readonly="vm.tabDelete" placeholder="Informe o nome"></field>
+            <field type="number" id="month" label="Mês" grid="12 4" model="vm.dados.month" readonly="vm.tabDelete" placeholder="Informe o mês"></field>
+            <field type="number" id="year" label="Ano" grid="12 4" model="vm.dados.year" readonly="vm.tabDelete" placeholder="Informe o ano"></field>
+
+            <div class="col-xs-12">
+                <fieldset>
+                    <legend>Resumo</legend>
+                    <div ng-include="'billingCycle/summary.html'"></div>
+                </fieldset>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <fieldset>
+                    <legend>Créditos</legend>
+                    <div class="row" ng-include="'billingCycle/creditList.html'"></div>
+                </fieldset>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <fieldset>
+                    <legend>Débitos</legend>
+                    <div class="row" ng-include="'billingCycle/debtList.html'"></div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="box-footer">
+        <button class="btn btn-success" ng-click="vm.create()" ng-if="vm.tabCreate">Adicionar</button>
+        <button class="btn btn-primary" ng-if="vm.tabUpdate" ng-click="vm.update()">Editar</button>
+        <button class="btn btn-danger" ng-if="vm.tabDelete" ng-click="vm.delete()">Excluir</button>
+        <button class="btn btn-default" ng-click="vm.refresh()">Cancelar</button>
+    </div>
+</form>

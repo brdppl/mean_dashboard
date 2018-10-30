@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+html, body {
+    font-family: 'Lato', sans-serif !important;
+    background-color: #ecf0f5;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

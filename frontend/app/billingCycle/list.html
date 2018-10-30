@@ -1,0 +1,26 @@
+<div class="box-body">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Mês</th>
+                <th>Ano</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in vm.tabela">
+                <td>{{:: x.name}}</td>
+                <td>{{:: x.month}}</td>
+                <td>{{:: x.year}}</td>
+                <td>
+                    <button class="btn btn-xs btn-primary" ng-click="vm.showTabUpdate(x)"><i class="fas fa-edit"></i> Editar</button>
+                    <button class="btn btn-xs btn-danger" ng-click="vm.showTabDelete(x)"><i class="fas fa-trash-alt"></i> Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="box-footer clearfix">
+    <paginator url="/#!/billingCycles" pages="{{vm.pages}}"></paginator>
+</div>
