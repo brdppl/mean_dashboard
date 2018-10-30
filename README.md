@@ -1,2 +1,2 @@
 # mean_dashboard
-Dashboard utilizando AngularJS, NodeJS, Express e MongoDB
+Dashboard utilizando MongoDB, Express, AngularJS e NodeJS 
