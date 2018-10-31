@@ -1,2 +1,3 @@
 # mean_dashboard
-Dashboard utilizando MongoDB, Express, AngularJS e NodeJS 
+API RESTFul utilizando MongoDB, Express e NodeJS
+Dashboard utilizando AngularJS
